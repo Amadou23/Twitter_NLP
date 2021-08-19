@@ -1,6 +1,7 @@
 from flask_sqlalchemy import SQLAlchemy
 import twitter
 
+
 db = SQLAlchemy()
 
 # Creates a 'user' table

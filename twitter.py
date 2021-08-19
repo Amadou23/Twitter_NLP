@@ -3,7 +3,6 @@ from os import getenv
 import tweepy
 import spacy
 import models
-import en_core_web_sm
 import os
 
 nlp = spacy.load("my_model")
