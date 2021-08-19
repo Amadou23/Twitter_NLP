@@ -6,7 +6,7 @@ db = SQLAlchemy()
 
 # Creates a 'user' table
 class User(db.Model):
-    id = db.Column(db.Integer, primary_key=True) # id as primary key
+    id = db.Column(db.BigInteger, primary_key=True) # id as primary key
     name = db.Column(db.String(50), nullable=False) # user name
     newest_tweet_id = db.Column(db.BigInteger) #keeps track of recent tweet 
     def __repr__(self):
@@ -14,10 +14,10 @@ class User(db.Model):
 
 # Creates a 'tweet' table
 class Tweet(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.BigInteger, primary_key=True)
     text = db.Column(db.Unicode(), nullable=False)    
     vect = db.Column(db.PickleType, nullable = False)
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    user_id = db.Column(db.BigInteger, db.ForeignKey('user.id'), nullable=False)
     user = db.relationship('User', backref=db.backref('tweets', lazy=True))
 
     def __repr__(self):
