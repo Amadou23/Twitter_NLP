@@ -17,6 +17,7 @@ def create_app():
     models.db.init_app(app)
     @app.route("/", methods=["GET", "POST"])
     def root():
+        models.db.create_all()
         return render_template("base.html", title="home", users = models.User.query.all())
 
     @app.route('/update')
