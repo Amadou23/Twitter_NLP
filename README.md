@@ -18,6 +18,6 @@ receiving and training on these vectors.
 
 The interface of the app is quite intuitive. There are two text boxes, one labeled "User to add" and
 the other, "Tweet text to predict". The user is expected to type a name into the 'add' box, such that Tweepy
-can add the respective twitter user(s) and their tweeting data to our PostgreSQL database. Our random forest
+can add the respective Twitter user(s) and their tweeting data to our PostgreSQL database. Our random forest
 will then train live on the inputted values. Once this has been accomplished with at least two Twitter users in the database, 
 one can add text into the 'predict' box, select the two users they wish to compare and let our model produce a result.
