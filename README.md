@@ -9,7 +9,7 @@ live data derived from Twitter. The goal of this project is to demonstrate how N
 level to classify hypertext by which Twitter user is most likely to 'tweet' (or post) it. For this project,
 Twitter API access had been granted, and implemented with the Tweepy wrapper for python.
 
-To start, the web app it built using the Flask platform and is deployed on Heroku. For the functionality
+To start, the web app is built using the Flask platform and is deployed on Heroku. For the functionality
 of the project, data is extracted from Twitter using its API and the Tweepy library and is fed into SQLAlchemy 
 tables. These tables which hold a variety of information we're concerned with, such as the usernames and past
 tweeting data, are integrated with our PostgreSQL database. The Spacy library is then responsible for vectorizing
